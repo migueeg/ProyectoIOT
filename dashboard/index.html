@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard IoT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>SISTEMA IOT - FAJA TRANSPORTADORA</h1>
+
+    <section class="motor-control">
+        <h2>Control del Motor</h2>
+        <button id="toggleMotor">Cargar Estado...</button>
+    </section>
+
+    <section class="logs">
+        <h2>Logs Recientes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Timestamp</th>
+                    <th>Sensor</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody id="logsTable"></tbody>
+        </table>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
