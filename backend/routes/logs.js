@@ -16,14 +16,13 @@ router.post("/", (req, res) => {
         [timestamp, sensor, value],
         (err) => {
             if (err) return res.status(500).json({ error: err.message });
-
             res.json({ message: "Log insertado correctamente" });
         }
     );
 });
 
 router.get("/", (req, res) => {
-    db.all("SELECT * FROM logs ORDER BY id DESC LIMIT 50", [], (err, rows) => {
+    db.all("SELECT * FROM logs ORDER BY id DESC LIMIT 100", [], (err, rows) => {
         if (err) return res.status(500).json({ error: err.message });
         res.json(rows);
     });

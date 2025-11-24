@@ -1,11 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-let motorState = false;
+let motorState = false;  
 
 router.post("/toggle", (req, res) => {
     motorState = !motorState;
-    console.log("Motor ahora está:", motorState ? "ENCENDIDO" : "APAGADO");
+    console.log("Motor está ahora:", motorState ? "ENCENDIDO" : "APAGADO");
+
     res.json({ motor: motorState });
 });
 

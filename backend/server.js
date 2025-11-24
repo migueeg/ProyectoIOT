@@ -9,9 +9,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Rutas
-app.use("/logs", logsRoutes);
-app.use("/motor", motorRoutes);
+app.use("/logs", logsRoutes);    
+app.use("/motor", motorRoutes);  
 
 const PORT = 3000;
 app.listen(PORT, () => {

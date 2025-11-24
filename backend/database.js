@@ -14,7 +14,6 @@ db.serialize(() => {
             value TEXT NOT NULL
         )
     `);
-
     console.log("Tabla logs verificada.");
 });
 
